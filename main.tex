@@ -1,0 +1,169 @@
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1.5cm,right=10cm,marginparwidth=7.5cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+%\geometry{left=1cm,right=9.5cm,marginparwidth=7.5cm,marginparsep=1.0cm,top=1.00cm,bottom=1.20cm}
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{darkblue}{HTML}{00394d}
+\definecolor{Mulberry}{HTML}{005c99}
+\definecolor{SlateGrey}{HTML}{000000}
+\definecolor{LightGrey}{HTML}{333333}
+\colorlet{heading}{darkblue}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% contains your publications
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+%set pagenumbering
+
+\name{Alexander Pletzer (PhD)}
+\tagline{High Performance Research Software Engineer at NIWA}
+\photo{3cm}{ME}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{alexander@gokliya.net}
+  \phone{(+64) (0)21 08579661}
+  % \printinfo{\faFemale}{May 10th 1996}
+  \printinfo{\faHome}{Wellington, New Zealand}
+  \printinfo{\faGithub}{pletzer}
+  % \printinfo{\faTwitter}{@HofsteengeMarte}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+    \orcid{orcid.org/0000-0002-4417-4083}
+    \orcid{Austrian citizen and New Zealand permanent resident}
+}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+\cvsection{Profile}
+
+\divider
+\medskip
+
+\cvsection{Experience}
+
+\begin{itemize}
+    \item HPC Research Software Engineer at NIWA for NeSI: 2016-present
+    \item Software Team Lead, Pennsylvania State University, State College PA USA: January-October 2015
+    \item Principal Scientist, Tech-X Corporation, Boulder CO USA: 2007-2014
+    \item Subject Matter Specialist, Geophysical Fluid Dynamics Lab, Princeton NJ USA: 2004-2006
+    \item Scientific Programmer, Princeton Plasma Physics Lab, Princeton NJ USA: 1997-2003
+    \item Scientist, Centre de Recherches en Physique des Plasmas, Switzerland: 1992-1997
+
+\end{itemize}
+
+\divider
+\medskip
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection{Education}
+
+  \begin{itemize}
+    \item Ecole Polytechnique Fédérale de Lausanne, Switzerland: Physics Diploma:    1983-1987
+    \item Australian National University, Canberra: PhD in theoretical physics and plasma physics:   1988-1992
+  \end{itemize}}
+
+\divider
+\medskip
+
+\cvsection{Publications}
+
+  \begin{itemize}
+    \item Krish Chaudhuri, Alexander Pletzer, Steve Waqanivavalagi et al.
+Personalized surgical planning for coronary bypass graft configurations using patient-specific computational modeling to avoid flow competition in arterial grafts, February 2023, Frontiers in Cardiovascular Medicine 10
+DOI:10.3389/fcvm.2023.1095678
+\item 
+    \item Krish Chaudhuri, Alexander Pletzer, Steve Waqanivavalagi et al. P17 CT Coronary angiography coupled to a novel flow solver measuring IFR, regional myocardial perfusion and predictive graft flow has the potential to improve surgical decision-making regarding coronary artery bypass graft configurations for individual patients by expert and novice coronary surgeons
+September 2022Heart (British Cardiac Society) 108(Suppl 2):A8.3-A9
+DOI:10.1136/heartjnl-2022-BSCI.22
+Conference: British Society of Cardiovascular Imaging Annual Meeting, Bath, 2022
+    \item Krish Chaudhuri, Alexander Pletzer and Nicolas P. Smith. A predictive patient-specific computational model of coronary artery bypass grafts for potential use by cardiac surgeons to guide selection of graft configurations
+ Frontiers
+September 2022Frontiers in Cardiovascular Medicine 9:953109
+DOI:10.3389/fcvm.2022.953109
+    \item Alexander Pletzer, Erik Behrens and Bill Little. MINT: a library that conserves vorticity or lateral fluxes when interpolating vector fields
+June 2022
+DOI:10.1145/3539781.3539786
+Conference: PASC '22: Platform for Advanced Scientific Computing Conference
+    \item Marco Jean-Paul Kienzl, Matt Kenyon Broadhurst, Alexander Pletzer and John Stewart. A Bayesian approach to estimating mortality rates using hazard functions: Application to an Australian halfbeak, Hyporhamphus australis fishery
+November 2021Fisheries Research 243(2):106066
+DOI:10.1016/j.fishres.2021.106066
+   \item David Coppin, Gilles Bellon, Alexander Pletzer and Chris Scott.
+Detecting and Tracking Coastal Precipitation in the Tropics: Methods and Insights into Multiscale Variability of Tropical Precipitation. August 2020Journal of Climate 33(15):6689-6705
+DOI:10.1175/JCLI-D-19-0321.1
+   \item Alexander Pletzer and Wolfgang Hayek.
+Mimetic Interpolation of Vector Fields on Arakawa C/D Grids. October 2018Monthly Weather Review 147(1)
+DOI:10.1175/MWR-D-18-0146.1
+   \item Alexander Pletzer, Wolfgang Hayek, Chris Scott and Georgina Rae.
+How NeSI Helps Users Run Better and Faster on New Zealand's Supercomputing Platforms
+\item Alexander Pletzer and David Fillmore “Conservative Interpolation of Edge and Face Data on n-Dimensional Structured Grids using Differential Forms”, J. Comput. Physics 302,  pp. 21-40 (2015)
+\item Alexander Pletzer, Ben Jamroz, Robert Crockett, and Scott Sides. “Compact cell-centered discretization stencils at fine-coarse grid interface”. J. Comput. Physics 260, p. 25 (2014)
+\item Dean N. Williams, Gavin Bell, Charles Doutriaux, Andrew C. Bauer, Aashish Chaudhary, Harinarayan Krishnan, Michael Wehner, Boonthanome Nouanesengsy, John Patchett, Gerald L. Potter, Thomas P. Maxwell, Wei-Chen Chen, George Ostrouchov, Dave Pugmire, Galen M Shipman, Brian E. Smith, Chad A. Steed, Alexander Pletzer. “Climate Science ‘Big Data’ Parallel Analysis: Analyzing Multi-Model Climate Simulation Data”. IEEE Parallel and Distributed Systems, under peer-review, 2013
+\item A. Pletzer and H. R. Strauss. “An efficient method for solving elliptic boundary element problems with application to the tokamak vacuum problem”. Computer Physics Communications, 182 (2011)
+\item A. Pletzer, D. McCune, S. Muszala, S. Vadlamani, and S. Kruger. “Exposing Fortran Derived Types to C and Other Languages”. Computing in Science and Engineering, July/August 86-92 (2008)
+\item Pletzer, A., Remik Ziemlinski, and Jared Cohen. “NCVTK: A Program for Visualizing Planetary Data”. Proceedings of the International Conference on Computational Science. Springer-Verlag Lecture Notes in Computer Science (2005)
+\item A. H. Kritz, G. Bateman, J. Kinsey, A. Pankin, T. Onjun, A. Redd D. McCune, C. Ludescher, A. Pletzer, R. Andre, L. Zakharov, L. Lodestro, L. D. Pearlstein, R. Jong, W. Houlberg, P. Strand, J. Wiley, P. Valanju, H. St. John, R. Waltz, J. Mandrekas, T. K. Mau, J. Carlsson and B. Braams. “The National Transport Code Collaboration Module Library”. Comput. Physics Comm. 164, 108 (2004)
+\item Pletzer A and Shvets G. “Simulating photons and plasmons in a three dimensional lattice”. Physica B 338, 190 (2003)
+\item A. Pletzer. ``Python \& Finite Elements''. Dr Dobbs J 27 (4), 36 March (2002)
+
+
+
+  \end{itemize}
+
+
+\divider
+\medskip
+
+
+
+\end{document}
